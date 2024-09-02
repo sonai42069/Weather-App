@@ -76,7 +76,7 @@ function dayOfTheWeek(day, month, year) {
     
     fetch(url).then(response => response.json()).then(data => {
         console.log(data)
-        temp.innerHTML = data.current.temp_c + "&#176;";
+        temp.innerHTML = parseInt(data.current.temp_c) + "&#176;";
         feelslike.innerHTML = "Feels Like :  " + data.current.feelslike_c  + "&#176;";
         conditionOutput.innerHTML = data.current.condition.text;
         const date = data.location.localtime;
